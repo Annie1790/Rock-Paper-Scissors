@@ -23,8 +23,8 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-    for (let i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoice();
-        let humanChoice = getComputerChoice();
-        console.log(playRound(humanChoice, computerChoice))
-    }
+for (let i = 0; i < 5; i++) { //loop for 5 rounds
+    let computerChoice = getComputerChoice();
+    let humanChoice = getComputerChoice();
+    console.log(playRound(humanChoice, computerChoice))
+}
