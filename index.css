@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "PatrickHand";
+    src: url("PatrickHand-Regular.ttf");
+}
+* {
+    font-family: PatrickHand;
+    text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("emoji-d3fcfd-1920x1080@2x.png");
+}
+
+.nav-bar {
+    list-style-type: none;
+    background-color: lightblue !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+li {
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+}
+li:hover {
+    background-color: rgb(139, 175, 187);
+}
+
+.button-flexbox-around {
+    display: flex;
+}
+
+.button-flexbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.button-flexbox > button {
+    font-size: 150px;
+
+}

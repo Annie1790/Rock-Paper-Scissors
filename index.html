@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-    <div>
-    <button id="Rock">Rock</button>
-    <button id="Paper">Paper</button>
-    <button id="Scissors">Scissors</button>
+
+    <header class="nav-bar">
+        <h1>Rock-Paper-Scissors Game</h1>
+        <ul>
+            <li>Back to portfolio</li>
+            <li>Back to Games</li>
+        </ul>
+    </header>
+    <main>
+<div class="button-flexbox-around">
+    <div class="button-flexbox">
+        <button id="Rock">👊</button>
+        <button id="Paper">✋</button>
+        <button id="Scissors">🖖</button>
+    </div>
 </div>
 
-<p>
-<p id="humanChoice">Human Choice</p>
-<p id="computerChoice">Computer Choice</p>
-<p id="result"></p>
-</p>
+
+    <div class="result-bar">
+        <p id="humanChoice">Your Choice</p>
+        <p id="computerChoice">Computer Choice</p>
+        <p id="result"></p>
+    </div>
+</main>
+<footer></footer>
 </body>
+
 </html>
