@@ -4,8 +4,8 @@ function getComputerChoice() { //returns a random string from the array
     let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
     return randomItem
 }
+
 function playRound(humanChoice, computerChoice) {
-    ;
     if (humanChoice === computerChoice) { //gives the scenarios
         return ("tie")
     } else if (humanChoice === "Rock" && computerChoice === "Paper") {
@@ -20,11 +20,35 @@ function playRound(humanChoice, computerChoice) {
         return ("You win! Scissors beats Paper")
     } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
         return ("You lose! Scissors beats paper ")
+    } else {
+        return "Impossible choice"
     }
 }
 
-for (let i = 0; i < 5; i++) { //loop for 5 rounds
-    let computerChoice = getComputerChoice();
-    let humanChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice))
+function playRoundDisplay(humanChoice, computerChoice) {
+    const humanChoiceDisplay = document.querySelector("#humanChoice");
+    humanChoiceDisplay.textContent = humanChoice;
+
+    const computerChoiceDisplay = document.querySelector("#computerChoice");
+    computerChoiceDisplay.textContent = computerChoice;
+
+    const resultChoiceDisplay = document.querySelector("#result");
+    resultChoiceDisplay.textContent = playRound(humanChoice, computerChoice)
 }
+
+const humanChoiceRock = document.querySelector("#Rock");
+humanChoiceRock.addEventListener("click", function () {
+    playRoundDisplay("Rock", getComputerChoice())
+})
+
+const humanChoicePaper = document.querySelector("#Paper");
+humanChoicePaper.addEventListener("click", function () {
+    playRoundDisplay("Paper", getComputerChoice())
+})
+
+const humanChoiceScissors = document.querySelector("#Scissors");
+humanChoiceScissors.addEventListener("click", function () {
+    playRoundDisplay("Scissors", getComputerChoice())
+})
+
+
