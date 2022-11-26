@@ -2,53 +2,52 @@
     font-family: "PatrickHand";
     src: url("PatrickHand-Regular.ttf");
 }
-* {
+
+body {
     font-family: PatrickHand;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-img {
-    position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-      filter: blur(5px);
+    background-image: url("background.png");
+    background-repeat: repeat;
+    background-position: 100%;
 }
 
 .nav-bar {
     list-style-type: none;
     background-color: #add8e6 !important;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: auto;
+    justify-content: center;
+    align-items: flex-end;
 }
+
 
 ul {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
 }
-li {
+
+ul>li {
     font-size: 20px;
-    padding: 10px 10px 10px 10px;
 }
-li:hover {
+
+ul>li:hover {
     background-color: rgb(139, 175, 187);
 }
 
-.button-flexbox-around {
+h1 {
     display: flex;
-    outline: 5px black;
+    justify-content: center;
+    font-size: 50px;
 }
 
 .button-flexbox {
-    
     width: 100%;
     height: 100%;
     display: flex;
@@ -56,20 +55,82 @@ li:hover {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: auto;
-}
-.button-flexbox > button {
-    font-size: 150px;
+    margin: auto;
 
+}
+
+.button-flexbox>button {
+    font-size: 120px;
+}
+
+.play-round-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    font-size: 40px;
 }
 
 .result-bar {
     font-size: 30px;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.score-box-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    border: 2px black solid;
+    background-color: #77949e;
+    width: 300px;
+    opacity: 0.9;
+}
+
+#new-game {
+    display: none;
+}
+
+.new-game-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: PatrickHand;
+}
+
+.new-game-button > div {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 25px;
+    background-color: #77949e;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    opacity: 0.9;
+}
+.new-game-button :hover {
+background-color: #5a7179;
+cursor: pointer;
 }
 
 footer {
-    padding: 10px;
-    margin-top: auto;
-    background-color:#add8e6 ;
+    width: 100%;
+    background-color: #add8e6;
+    position: fixed;
+    bottom: 0;
 }

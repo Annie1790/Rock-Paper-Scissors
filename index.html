@@ -12,17 +12,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-    <img src="emoji-d3fcfd-1920x1080@2x.png" alt="Background Image">
     <header class="nav-bar">
-        <h1>Rock-Paper-Scissors Game</h1>
         <ul>
             <li>Back to portfolio</li>
             <li>Back to Games</li>
+            <li> <a href="https://github.com/Annie1790"> My Github</a></li>
         </ul>
     </header>
     <main>
 
-        <div></div>
+        <h1>Rock-Paper-Scissors</h1>
+
+        <p class="result-bar" id="result">Result</p>
 
         <div class="button-flexbox-around">
             <div class="button-flexbox">
@@ -32,15 +33,28 @@
             </div>
         </div>
 
+        <div class="play-round-bar">
+            <p id="humanChoice">You</p>
+            <p id="computerChoice">Computer</p>
+        </div>
+        <div class="score-box-frame">
+            <div class="score-box">
+                <div>
+                    <p>Player Score:</p>
+                    <p id="humanScore">0</p>
+                </div>
+                <div>
+                    <p>Computer Score: </p>
+                    <p id="computerScore">0</p>
+                </div>
+            </div>
+        </div>
 
-        <div class="result-bar">
-            <p id="humanChoice">Your Choice</p>
-            <p id="computerChoice">Computer Choice</p>
-            <p id="result"></p>
+        <div class="new-game-button">
+            <div id="new-game">New Game</div>
         </div>
     </main>
-    <footer>
-        <p>by Aniko Buday</p>
+    <footer>Made by Annie1790
     </footer>
 </body>
 
